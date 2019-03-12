@@ -76,9 +76,11 @@ header {
 /* Generic styles ----------------------------------------------*/
 body {
   font-family: 'Quicksand', sans-serif;
+  background-image: url(../resources/images/backgroun.jpg)
 }
 
 header {
+  display: flex;
   padding: 10px;
   font-size: 2em;
   color: white;
@@ -127,6 +129,7 @@ header {
 .cards {
   max-width: 960px;
   margin: 0 auto 30px;
+  align-self: flex-end;
 }
 
 article {
@@ -145,4 +148,73 @@ article {
   width: 100%;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+footer {
+  grid-column: span 3 ;
+  padding: 30px;
+  text-align: center;
+  font-size: 1em;
+  background-color: rgb(15, 7, 80);
+  color: white;
+}
+
+footer p{
+  font-weight: bold;
+  font-family: 'Jura', sans-serif;
+}
+
+.subleading-text {
+  max-width: 900px;
+  font-size: 1.8em;
+  line-height: 1.4em;
+  font-weight: bold;
+  font-family: 'Jura', sans-serif;
+  text-shadow: -1px 0 rgb(0, 2, 112), 0 1px rgb(0, 2, 112), 1px 0 rgb(0, 2, 112), 0 -1px rgb(0, 2, 112);
+  margin: 1px 20px 1px 1px;
+}
+header .contact{
+  height: 50px;
+  margin-right: 20px;
+  align-self: flex-end
+}
+.hesect{
+    position: absolute;
+    right: 0px;
+}
+
+.divisor{
+  padding: 2px;
+  background-color: white;
+}
+
+.contents{
+  display: flex;
+
+}
+
+.contents p{
+  color: #f1f1f1;
+  text-shadow: -1px 0 rgb(0, 2, 112), 0 1px rgb(0, 2, 112), 1px 0 rgb(0, 2, 112), 0 -1px rgb(0, 2, 112);
+  margin: 10px 20px 1px 1px;
+}
+.contents h1{
+  color: #f1f1f1; 
 }
