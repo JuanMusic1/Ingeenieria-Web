@@ -5,7 +5,7 @@
 <h1>Mis tareas</h1>
 <ul>
     @foreach ($tareas as $tarea)
-        <li> {{$tarea->title }}</li>
+        <li> <a href="/tasks/{{$tarea->id }}">{{$tarea->title}}</a></li>
     @endforeach
 </ul>
 @endsection
