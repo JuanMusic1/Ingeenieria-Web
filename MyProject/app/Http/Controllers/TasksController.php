@@ -24,8 +24,9 @@ class TasksController extends Controller
             'title' => 'required|max:25|min:3',
             'description' => 'required|min:10'
         ]);
-        Task::create($data);
+        //Task::create($data);
         //Task::create(request(['title', 'description']));
+        auth()->user()->tasks()->create($data);
         return redirect('/tasks');
     }
 

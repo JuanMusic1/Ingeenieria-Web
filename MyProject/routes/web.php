@@ -23,7 +23,6 @@ Route::get('/tasks/{task}/edit', 'TasksController@edit');
 Route::patch('/tasks/{task}', 'TasksController@update');
 Route::delete('/tasks/{task}', 'TasksController@destroy');
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
