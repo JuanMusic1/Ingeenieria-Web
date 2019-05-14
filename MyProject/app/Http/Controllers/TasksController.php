@@ -7,9 +7,18 @@ use App\Task;
 
 class TasksController extends Controller
 {
+
+    public function __construct(){
+
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
-        $tareas = Task::all();
+        //auth()->id(); check()
+        //$tareas = Task::all();
+        $tareas = Task::where('user_id', auth()->id())->get();
 
         return view('tasks.index')->with(["tareas" => $tareas]);
     }
